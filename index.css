@@ -55,7 +55,7 @@
   --p-light: 300;
   --p-regular: 400;
   --p-medium: 500;
-  --transit: all 1s ease;
+  --transit: all 300ms ease;
 }
 @font-face {
   font-family: "Montserrat";
@@ -78,7 +78,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: position 1s ease-in-out;
+  transition: position 300ms ease-in-out;
   z-index: 2;
 }
 hr {
@@ -113,7 +113,7 @@ hr {
 }
 .show {
   opacity: 1;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 section {
   margin-inline: 40px;
@@ -162,7 +162,7 @@ section {
 .what-i-do-container:hover {
   background: var(--color-dark);
   transform: scaleX(1.03);
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 .what-i-do-heading {
   font-weight: bold;
@@ -189,7 +189,7 @@ section {
 .portfolio-card:hover img,
 .person-img:hover {
   transform: scaleX(1.03);
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 .portfolio-card:hover .portfolio-title {
   color: var(--color-subtitle);
@@ -218,7 +218,7 @@ section {
 }
 .portfolio-card img {
   width: 100%;
-  transition-duration: 500ms;
+  transition-duration: 300ms;
   object-fit: contain;
   border-radius: 10px;
 }
@@ -249,8 +249,8 @@ section {
 /* End portfolio section style */
 
 /* Resume section style */
-.rtabs{
-  animation: slide linear 1s;
+.rtabs {
+  animation: slide linear 300ms;
 }
 .resume-tabs-div {
   background: var(--background-color-1);
@@ -302,7 +302,7 @@ section {
   margin-bottom: 10px;
   color: var(--color-heading);
   font-weight: bold;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .school-inner small {
   color: var(--color-body);
@@ -325,19 +325,19 @@ section {
 .right-div:hover .school-inner p,
 .right-div:hover .school-inner small {
   color: var(--color-gray);
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .right-div:hover .school-p-footer {
   color: var(--color-heading);
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .right-div:hover {
   background: linear-gradient(190deg, #1e2024, #23272b);
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .school-container:hover .circle {
   background-color: var(--color-subtitle);
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 
 .circle-border-div {
@@ -352,7 +352,7 @@ section {
   border-radius: 100%;
   border: 5px solid var(--color-darker);
   background: #23272b;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .border-hr {
   width: 30px;
@@ -365,7 +365,7 @@ section {
 .tab-active {
   color: var(--color-subtitle);
   box-shadow: var(--shadow-1);
-  transition-duration: 500ms;
+  transition-duration: 300ms;
 }
 
 /* Skill Progress */
@@ -378,7 +378,7 @@ section {
   box-shadow: var(--shadow-1);
   margin-bottom: 20px;
   margin-top: 7px;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .skill-div {
   display: flex;
@@ -415,7 +415,7 @@ section {
 .star-filled {
   color: var(--color-warning);
 }
-.star-unfilled{
+.star-unfilled {
   color: var(--color-heading);
 }
 .star-div {
@@ -471,17 +471,33 @@ section {
 
 .display-testimonial-div {
   display: flex;
-  animation: slide linear 1s;
+  animation: slide linear 300ms;
 }
 
-@keyframes slide{
-  20%{
+@keyframes slide {
+  20% {
     opacity: 0;
     transition-duration: 200ms;
   }
 }
 
 /* End testimonial */
+
+/* Pricing style */
+#pricing {
+  display: flex;
+}
+#pricing .resume-div{
+  background: var(--background-color-1);
+}
+ .ptabs{
+  width: auto;
+ }
+.pricing-heading-div {
+  flex-grow: 1;
+}
+
+/* End pricing style */
 
 .header-image-div {
   display: flex;
@@ -501,7 +517,7 @@ section {
   text-decoration: none;
   color: var(--color-body);
   padding-inline: 10px;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .menu-nav-outer a {
   color: var(--color-heading);
@@ -536,7 +552,7 @@ section {
   padding: 25px;
   overflow-y: scroll;
   z-index: 2;
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 .nav-outer-img-div {
   display: flex;
@@ -569,9 +585,10 @@ section {
   font-weight: 700;
   border-radius: 5px;
   box-shadow: var(--shadow-1);
+  background: var(--color-darker);
 }
 .hire-me-nav {
-  transition-duration: 1s;
+  transition-duration: 300ms;
 }
 
 .hire-me:hover {
@@ -675,10 +692,11 @@ section {
 .nav-menu-bar,
 #close-modal {
   box-shadow: var(--shadow-1);
-  padding: 13px;
+  background: var(--color-dark);
+  padding: 18px;
   border-radius: 100%;
   font-weight: 700;
-  transition-duration: 1s;
+  transition-duration: 300ms;
   color: var(--color-subtitle);
   font-size: 1.1em;
 }
@@ -689,7 +707,7 @@ section {
 .menu-nav .nav-focused .modal-nav .intersecting,
 .menu-nav .intersecting {
   color: var(--color-secondary);
-  transition: 500ms;
+  transition: 300ms;
 }
 /* End focus */
 
