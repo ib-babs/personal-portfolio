@@ -1,5 +1,7 @@
 window.addEventListener("load", function () {
   const rtabs = $(".rtabs"),
+    ptabs = $(".ptabs"),
+    ptab = $(".price-tab"),
     rtab = $(".resume-tab"),
     navlink1 = $(".navlink-1"),
     navlink2 = $(".navlink-2"),
@@ -66,23 +68,32 @@ window.addEventListener("load", function () {
   activeLink(navlink1, navlink2);
   activeLink(navlink2, navlink1);
 
-  $.each(rtab, function (idx, tab) {
-    $(tab).click(function () {
-      const activeTab = $(rtabs[idx]);
-      $(rtabs).attr("hidden", "hidden");
-      activeTab.removeAttr("hidden");
-      activeTab.addClass("hidden");
-      $(rtab).removeClass("tab-active");
-      $(tab).addClass("tab-active");
-      if (idx === 1) {
-        const progressBars = $(".progress-bar");
-        progressBars.animate(
-          { width: "100%" },
-          { duration: 700, fill: "forwards" }
-        );
-      }
+  function tabHandler(tabs, tabDiv, progress = true) {
+    $.each(tabs, function (idx, tab) {
+      $(tab).click(function () {
+        const activeTab = $(tabDiv[idx]);
+        $(tabDiv).attr("hidden", "hidden");
+        activeTab.removeAttr("hidden");
+        activeTab.addClass("hidden");
+        $(tabs).removeClass("tab-active");
+        $(tab).addClass("tab-active");
+        if (progress && idx === 1) {
+          const progressBars = $(".progress-bar");
+          progressBars.animate(
+            { width: "100%" },
+            { duration: 700, fill: "forwards" }
+          );
+        }
+      });
     });
-  });
+  }
+
+  // Resume tabs
+  tabHandler(rtab, rtabs)
+  // Price tabs
+  tabHandler(ptab, ptabs, progress=false)
+
+  // Development Skill Progress bard
   $.each($(".progress-bar"), function (idx, bar) {
     $(bar).css(
       "background",
@@ -110,7 +121,7 @@ window.addEventListener("load", function () {
     testimonialDivs = $(".testimonial-div");
   $(".testimonial-div").on("mousedown", function (e) {
     if (testimonialSize <= 2) {
-      testimonialDivs.css('cursor', 'pointer')
+      testimonialDivs.css("cursor", "pointer");
       if (window.innerWidth / 2 > e.clientX && testimonialSize > 0) {
         testimonialDivs.removeClass("display-testimonial-div");
         ovals.removeClass("slide-dot-color");
@@ -128,13 +139,13 @@ window.addEventListener("load", function () {
     }
   });
 
-  $.each(ovals, (idx, oval)=>{
-    $(oval).click(()=>{
+  $.each(ovals, (idx, oval) => {
+    $(oval).click(() => {
       testimonialDivs.removeClass("display-testimonial-div");
       ovals.removeClass("slide-dot-color");
       testimonialSize = idx;
       $(testimonialDivs[idx]).addClass("display-testimonial-div");
       $(ovals[idx]).addClass("slide-dot-color");
-    })
-  })
+    });
+  });
 });
