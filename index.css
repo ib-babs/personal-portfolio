@@ -64,6 +64,7 @@
 }
 body {
   margin: 0;
+  user-select: none;
   background: var(--background-color-1);
   font-family: "Montserrat";
 }
@@ -433,7 +434,6 @@ section {
   display: none;
 }
 .testimonial-div img {
-  width: 100px;
   border-radius: 5px;
 }
 .person-role {
@@ -487,12 +487,12 @@ section {
 #pricing {
   display: flex;
 }
-#pricing .resume-div{
+#pricing .resume-div {
   background: var(--background-color-1);
 }
- .ptabs{
+.ptabs {
   width: auto;
- }
+}
 .pricing-heading-div {
   flex-grow: 1;
 }
@@ -721,6 +721,9 @@ section {
   }
   /* end resume */
   /* Testimonial style */
+  .testimonial-div img {
+    width: 100px;
+  }
   .quote {
     visibility: hidden;
   }
@@ -729,7 +732,11 @@ section {
     padding-inline: 20px;
   }
   /* end testimonial */
-
+  /* Pricing style */
+  #pricing {
+    flex-direction: column;
+  }
+  /* end pricing*/
   .skills-and-social {
     flex-direction: column;
     gap: 30px;
@@ -775,6 +782,30 @@ section {
   .nav-menu-bar {
     font-size: 1.3em;
   }
+}
+
+@media screen and (320px <= width <= 500px) {
+  /* Resume style */
+  .skill-progress{
+    padding-inline-end: 15px;
+  }
+  /* End Resume */
+  /* Testimonial style */
+  .work-div-flex,
+  .person-div {
+    flex-direction: column;
+  }
+  .person-div {
+    gap: 4px;
+  }
+  .work-div-flex {
+    align-items: baseline;
+    gap: 30px;
+  }
+  .testimonial-div img {
+    width: clamp(200px, 100%, 380px);
+  }
+  /* End Testimonial */
 }
 @media screen and (min-width: 1024px) {
   /* Features */
@@ -839,6 +870,25 @@ section {
     font-size: 1.1em;
   }
   /* end testimonial */
+
+  /* Pricing style */
+  #pricing {
+    position: relative;
+  }
+  .p-price,
+  .h1-price {
+    text-align: left;
+  }
+  #pricing .pricing-heading-div div {
+    position: sticky;
+    top: 120px;
+  }
+  #pricing .pricing-heading-div {
+    position: sticky;
+    top: 100px;
+  }
+  /* end pricing*/
+
   .intro {
     display: flex;
     flex-direction: column;

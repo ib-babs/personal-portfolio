@@ -97,7 +97,7 @@ window.addEventListener("load", function () {
     $(bar).data("value") === 100
       ? $($(".progress-percentage")[idx]).css(
           "left",
-          `${$(bar).data("value") - 6}%`
+          `${$(bar).data("value") - 7}%`
         )
       : $($(".progress-percentage")[idx]).css(
           "left",
