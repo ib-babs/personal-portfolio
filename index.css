@@ -105,6 +105,12 @@ hr {
 .color-subtitle {
   color: var(--color-subtitle);
 }
+.p-heading-xl{
+  font-size: 1.6em;
+}
+.p-medium{
+  font-weight: var(--p-medium);
+}
 /* end common */
 
 /* Section style */
@@ -195,7 +201,7 @@ section {
 .portfolio-card:hover .portfolio-title {
   color: var(--color-subtitle);
 }
-.portfolio-card:hover {
+.portfolio-card:hover{
   margin-block-start: 1px;
   background: linear-gradient(87deg, #1e2024, #23272b);
   transition-duration: 100ms;
@@ -332,7 +338,7 @@ section {
   color: var(--color-heading);
   transition-duration: 300ms;
 }
-.right-div:hover {
+.right-div:hover{
   background: linear-gradient(190deg, #1e2024, #23272b);
   transition-duration: 300ms;
 }
@@ -487,16 +493,51 @@ section {
 #pricing {
   display: flex;
 }
+#pricing .resume-tabs-div{
+  flex-direction: row;
+}
 #pricing .resume-div {
   background: var(--background-color-1);
 }
 .ptabs {
-  width: auto;
+  padding-block-end: 20px;
+  padding-inline: 30px;
 }
 .pricing-heading-div {
   flex-grow: 1;
 }
-
+.price-div{
+  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  padding: 15px;
+  border-radius: 5px;
+}
+.price{
+  font-weight: bolder;
+  margin: 0;
+}
+.ptab-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.order-now{
+  box-shadow: var(--shadow-1);
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+  margin-top: 3em;
+}
+.ptab-footer{
+  text-align: center;
+  margin-top: 1.3em;
+}
+.order-now:hover  {
+  cursor: pointer;
+  background: linear-gradient(179deg, #1e2024, #23272b);
+  margin-top: 3.1em;
+  transition-duration:  500ms;
+}
 /* End pricing style */
 
 .header-image-div {
@@ -713,7 +754,10 @@ section {
 
 @media screen and (320px <= width < 1024px) {
   /* Resume section style */
-  .resume-tabs-div {
+  .ptab-flex{
+    gap: 30px;
+  }
+  .ptab-flex, .resume-tabs-div {
     flex-direction: column;
   }
   .right-div {
@@ -735,6 +779,9 @@ section {
   /* Pricing style */
   #pricing {
     flex-direction: column;
+  }
+  .price-tag-desc{
+    width: 80%;
   }
   /* end pricing*/
   .skills-and-social {
@@ -886,6 +933,9 @@ section {
   #pricing .pricing-heading-div {
     position: sticky;
     top: 100px;
+  }
+  .price-tag-desc{
+    width: 70%;
   }
   /* end pricing*/
 
