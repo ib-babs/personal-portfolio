@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.5.1-web/css/all.css"
+    />
+    <script src="assets/jquery-3.7.1.min.js"></script>
+    <title>Personal Portfolio | Ibrahim</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-image-div">
+        <img src="assets/just-image.jpg" alt="dev-image" />
+        <p>KHALEEL</p>
+      </div>
+      <nav class="menu-nav">
+        <a class="navlink-1 nav-focused" href="#home">HOME</a>
+        <a class="navlink-1" href="#features">FEATURES</a>
+        <a class="navlink-1" href="#portfolio">PORTFOLIO</a>
+        <a class="navlink-1" href="#resume">RESUME</a>
+        <a class="navlink-1" href="#testimonial">TESTIMONIAL</a>
+        <a class="navlink-1" href="#pricing">PRICING</a>
+        <a class="navlink-1" href="#blog">BLOG</a>
+        <a class="navlink-1" href="#contacts">CONTACTS</a>
+      </nav>
+      <nav class="hire-me-nav">
+        <a href="#hire-me" class="hire-me">HIRE ME</a>
+      </nav>
+      <i class="fa fa-align-right nav-menu-bar" id="menu-icon"></i>
+    </header>
+
+    <nav class="menu-nav-outer" hidden>
+      <div>
+        <div class="nav-outer-img-div">
+          <img src="assets/just-image.jpg" alt="dev-image" />
+          <i class="fa fa-times-circle" id="close-modal"></i>
+        </div>
+        <p style="padding-block: 10px">
+          I'm a Software Engineering graduated from ALX. Hire me for your
+          engineering work!
+        </p>
+      </div>
+      <div class="links-div">
+        <a class="navlink-2 nav-focused" href="#home">HOME</a>
+        <a class="navlink-2" href="#features">FEATURES</a>
+        <a class="navlink-2" href="#portfolio">PORTFOLIO</a>
+        <a class="navlink-2" href="#resume">RESUME</a>
+        <a class="navlink-2" href="#testimonial">TESTIMONIAL</a>
+        <a class="navlink-2" href="#pricing">PRICING</a>
+        <a class="navlink-2" href="#blog">BLOG</a>
+        <a class="navlink-2" href="#contacts">CONTACTS</a>
+      </div>
+      <div class="find-with-me">
+        <p>FIND WITH ME</p>
+        <div class="social-links">
+          <a href="#">
+            <i aria-disabled="true" class="fab fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i aria-disabled="true" class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i aria-disabled="true" class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="intro">
+        <p id="welcome">WELCOME TO MY WORLD</p>
+        <p id="hi-me">Hi, I'm <span id="name-span">Babatunde Ibrahim</span></p>
+
+        <!-- Typesetting -->
+        <div class="typesetting-div">
+          <span id="a-letter">a</span>
+          <ul>
+            <li>Developer.</li>
+            <li>Teacher.</li>
+            <li>Software Engineer.</li>
+            <li>Backend Specialist.</li>
+          </ul>
+        </div>
+
+        <p id="intro-description">
+          APIs are great to interact with and most of the times being a crucial
+          part of application. I program APIs to tremendously reduce the time
+          needed for the developing an application and to ship the app as soon
+          as possible.
+        </p>
+        <div class="skills-and-social">
+          <!-- find me with -->
+          <div class="find-with-me">
+            <p>FIND WITH ME</p>
+            <div class="social-links">
+              <a href="#">
+                <i aria-disabled="true" class="fab fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i aria-disabled="true" class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i aria-disabled="true" class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Skills -->
+          <div class="skills">
+            <p>BEST SKILL ON</p>
+            <div class="skills-set">
+              <img src="assets/c-logo.png" alt="c-logo" />
+              <img src="assets/py-logo.png" alt="python-logo" />
+              <img src="assets/node-logo.png" alt="javascript-logo" />
+            </div>
+          </div>
+          <!-- End skills -->
+        </div>
+      </div>
+      <div id="dev-image-container">
+        <img src="assets/just-image.jpg" alt="dev-image" />
+      </div>
+    </section>
+    <!-- End Home  -->
+
+    <!-- Features -->
+    <section id="features">
+      <p id="p-feature">FEATURES</p>
+      <h2 id="h-what-i-do">What I Do</h2>
+      <div class="what-i-do-parent-container">
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fa fa-bars"></i>
+            <p class="what-i-do-heading">API Programming</p>
+            <p class="what-i-do-body">
+              APIs are great for building robust application. It is the core of
+              the programming.
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fa fa-globe"></i>
+            <p class="what-i-do-heading">Website Development</p>
+            <p class="what-i-do-body">
+              We’ll handle everything from to app development process until it
+              is time to make your project live.
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fas fa-book-open"></i>
+            <p class="what-i-do-heading">SEO Optimization</p>
+            <p class="what-i-do-body">
+              Your website ranking matters. Our SEO services will help you get
+              to the top of the ranks and stay there!
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fa fa-database"></i>
+            <p class="what-i-do-heading">Data Administration</p>
+            <p class="what-i-do-body">
+              Data matters. Efficient data mmanagement keeps your application
+              growing. Your data should be well arranged and highly secured.
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fa fa-graduation-cap"></i>
+            <p class="what-i-do-heading">Tutoring</p>
+            <p class="what-i-do-body">
+              The world we're living in now is a tech-driven one. Tech is
+              Future. Secure your FUTURE!
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="what-i-do-container">
+          <div class="what-i-do">
+            <i class="fa fa-tv"></i>
+            <p class="what-i-do-heading">Business Stratagy</p>
+            <p class="what-i-do-body">
+              We’ll help you optimize your business processes to maximize
+              profitability and eliminate unnecessary costs.
+            </p>
+            <i class="fa fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End features -->
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <p class="visit-portfolio">VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</p>
+      <h1 class="h1-portfolio">My Portfolio</h1>
+      <div class="portfolio-projects">
+        <div class="portfolio-card">
+          <a href="https://github.com/ib-babs/talk-IT" target="_blank">
+            <figure>
+              <img src="assets/talk-it.png" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >GITHUB
+                  <i class="fab fa-github" aria-disabled="true"></i></span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 240</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">
+              TALK-IT Mini Social Media for Programmers.
+            </p>
+          </a>
+        </div>
+        <div class="portfolio-card">
+          <a href="https://reetlearn-bpvy.onrender.com" target="_blank">
+            <figure>
+              <img src="assets/reetlearn.png" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >EXTERNAL LINK
+                  <i class="fa fa-external-link" aria-disabled="true"></i></span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 320</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">Reetlearn - Online Learning Platform</p>
+          </a>
+        </div>
+        <div class="portfolio-card">
+          <a href="https://github.com/ib-babs/AirBnB_clone_v4" target="_blank">
+            <figure>
+              <img src="assets/airbnb-clone.png" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >GITHUB
+                  <i class="fab fa-github" aria-disabled="true"></i></span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 400</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">Airbnb Clone - Tour to World.</p>
+          </a>
+        </div>
+        <div class="portfolio-card">
+          <a href="https://alquran-kareem.netlify.app">
+            <figure>
+              <img src="assets/images (1) (22).jpeg" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >EXTERNAL LINK
+                  <i
+                    class="fa fa-external-link"
+                    aria-disabled="true"
+                  ></i> </span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 100</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">
+              Al Quran Kareem - Religion Book for the Muslims. (Mobile View
+              Only)
+            </p>
+          </a>
+        </div>
+        <div class="portfolio-card">
+          <a href="https://reetlearn.onrender.com">
+            <figure>
+              <img src="assets/reetlogo.png" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >EXTERNAL LINK
+                  <i
+                    class="fa fa-external-link"
+                    aria-disabled="true"
+                  ></i> </span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 120</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">
+              Reetlearn API - Reetlearn Platform Core.
+            </p>
+          </a>
+        </div>
+        <div class="portfolio-card">
+          <a href="https://github.com/ib-babs/simple-shell">
+            <figure>
+              <img src="assets/shell.jpg" alt="portfolio-log" />
+              <figcaption>
+                <span
+                  >GITHUB
+                  <i class="fab fa-github" aria-disabled="true"></i> </span
+                ><span style="color: var(--color-heading)"
+                  ><i class="far fa-heart"></i> 100</span
+                >
+              </figcaption>
+            </figure>
+            <p class="portfolio-title">
+              Simple Shell - Linux Terminal built with C.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End portfolio -->
+
+    <!-- Resume -->
+    <section id="resume">
+      <p class="resume-experience">2+ YEAR OF EXPERIENCE</p>
+      <h1 class="h1-resume">My Resume</h1>
+      <div class="resume-div">
+        <div class="resume-tabs-div">
+          <a href="#rtab1" class="resume-tab tab-active"> Education </a>
+          <a href="#rtab2" class="resume-tab tab2"> Professional Skills </a>
+          <a href="#rtab3" class="resume-tab tab3"> Experience </a>
+        </div>
+
+        <!-- RTab 1 -->
+        <div class="rtabs">
+          <p class="p-heading">2004 - 2024</p>
+          <h1 class="h1-heading">Education Quality</h1>
+          <div class="education-div">
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Certificate in Software Engineering</p>
+                    <small>ALX Online Learning School (2023 - 2024)</small>
+                  </div>
+                  <small class="point">134/200</small>
+                </div>
+                <p class="school-p-footer">
+                  The training provided by the school in order to prepare people
+                  to work in various sectors of the economy or areas of culture.
+                </p>
+              </div>
+            </div>
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Certificate in Computer Science/Biology</p>
+                    <small>Lifegate College of Education (2018 - 2021)</small>
+                  </div>
+                  <small class="point">4.9/5.0</small>
+                </div>
+                <p class="school-p-footer">
+                  College of Education produces teachers of high standard of
+                  moral and values around the world.
+                </p>
+              </div>
+            </div>
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Secondary School Education</p>
+                    <small>Government Secondary School (2012 - 2017)</small>
+                  </div>
+                  <small class="point">A/A</small>
+                </div>
+                <p class="school-p-footer">
+                  Secondary School is a vital school for a student where he
+                  determines his future and what it entails.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- RTab 2 -->
+        <div class="rtabs" hidden>
+          <p class="p-heading">Features</p>
+          <h1 class="h1-heading">Development</h1>
+          <div class="skill-progress">
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">HTML</span>
+                <span class="progress-percentage">100%</span>
+              </div>
+              <div class="progress-bar" data-value="100"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">CSS</span>
+                <span class="progress-percentage">95%</span>
+              </div>
+              <div class="progress-bar" data-value="95"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">SQL</span>
+                <span class="progress-percentage">85%</span>
+              </div>
+              <div class="progress-bar" data-value="85"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">Python</span>
+                <span class="progress-percentage">70%</span>
+              </div>
+              <div class="progress-bar" data-value="70"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">Software</span>
+                <span class="progress-percentage">70%</span>
+              </div>
+              <div class="progress-bar" data-value="70"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">JavaScript</span>
+                <span class="progress-percentage">60%</span>
+              </div>
+              <div class="progress-bar" data-value="60"></div>
+            </div>
+            <div class="skill-div">
+              <div>
+                <span class="lang-span">C</span>
+                <span class="progress-percentage">50%</span>
+              </div>
+              <div class="progress-bar" data-value="50"></div>
+            </div>
+          </div>
+        </div>
+        <!-- RTab 3 -->
+        <div class="rtabs" hidden>
+          <p class="p-heading">2019 - 2024</p>
+          <h1 class="h1-heading">Job Experience</h1>
+          <div class="education-div">
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Elementary School Teacher</p>
+                    <small>NYSC Elementary School (2022 - 2024)</small>
+                  </div>
+                  <small class="point">NIGERIA</small>
+                </div>
+                <p class="school-p-footer">
+                  Teaching is an art and every teacher learns as he teaches.
+                  Effective teaching method goes a long way aiding students'
+                  understanding
+                </p>
+              </div>
+            </div>
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Computer Science Tutor as a Student</p>
+                    <small>Lifegate College of Education (2018 - 2021)</small>
+                  </div>
+                  <small class="point">NIGERIA</small>
+                </div>
+                <p class="school-p-footer">
+                  Undeniably is the knowledge of science and especially of that
+                  computer. It is a gem!
+                </p>
+              </div>
+            </div>
+            <div class="school-container">
+              <div class="left-border">
+                <div class="circle-border-div">
+                  <div class="circle"></div>
+                  <div class="border-hr"></div>
+                </div>
+              </div>
+
+              <div class="right-div">
+                <div class="school">
+                  <div class="school-inner">
+                    <p>Secondary School Computer Tutor as a Student</p>
+                    <small>Government Secondary School (2015 - 2017)</small>
+                  </div>
+                  <small class="point">NIGERIA</small>
+                </div>
+                <p class="school-p-footer">
+                  Computer being a machine that's really fun to work with, it
+                  entices the attention of the pupils. Everyone loves its magic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End resume -->
+
+    <!-- Testimonial -->
+    <section id="testimonial">
+      <p class="visit-portfolio">WHAT CLIENTS SAY</p>
+      <h1 class="h1-portfolio">Testimonial</h1>
+
+      <div class="testimonials-container">
+        <div class="testimonial-div display-testimonial-div">
+          <div class="person-div bg-1">
+            <figure style="margin: 0">
+              <img
+                class="person-img"
+                src="assets/just-image.jpg"
+                alt="person-img"
+              />
+            </figure>
+            <figcaption>
+              <small style="font-weight: bold" class="color-subtitle"
+                >NIGERIA</small
+              >
+              <p class="person-name color-heading">Dr. Ibiniyi Timothy</p>
+              <small class="person-role color-body"
+                >Computer Science Lecturer</small
+              >
+            </figcaption>
+          </div>
+          <div class="person-info-div">
+            <span class="fas fa-quote-right quote"></span>
+            <div class="workdone-div bg-1">
+              <div class="work-div-flex">
+                <div>
+                  <p class="work-done color-heading">School Web Application</p>
+                  <small class="color-body via"
+                    >via Virtual - Jan 10, 2020 - Sept 19, 2021</small
+                  >
+                </div>
+                <div class="star-div">
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                </div>
+              </div>
+              <p class="comment color-body">
+                Sint adipisicing do laboris ut sit esse nisi veniam.
+                Reprehenderit veniam laboris fugiat Lorem consequat consequat
+                occaecat elit laborum laboris. Culpa in esse cupidatat ad mollit
+                tempor do fugiat esse commodo proident laboris cillum elit.
+                Aliquip aute
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-div">
+          <div class="person-div bg-1">
+            <figure style="margin: 0">
+              <img
+                class="person-img"
+                src="assets/just-image.jpg"
+                alt="person-img"
+              />
+            </figure>
+            <figcaption>
+              <small style="font-weight: bold" class="color-subtitle"
+                >NIGERIA</small
+              >
+              <p class="person-name color-heading">Mr. Emmanuel Onu</p>
+              <small class="person-role color-body"
+                >Professional Graphic Designer</small
+              >
+            </figcaption>
+          </div>
+          <div class="person-info-div">
+            <span class="fas fa-quote-right quote"></span>
+            <div class="workdone-div bg-1">
+              <div class="work-div-flex">
+                <div>
+                  <p class="work-done color-heading">School Web Application</p>
+                  <small class="color-body via"
+                    >via Virtual - Jan 10, 2020 - Sept 19, 2021</small
+                  >
+                </div>
+                <div class="star-div">
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                </div>
+              </div>
+              <p class="comment color-body">
+                Sint adipisicing do laboris ut sit esse nisi veniam.
+                Reprehenderit veniam laboris fugiat Lorem consequat consequat
+                occaecat elit laborum laboris. Culpa in esse cupidatat ad mollit
+                tempor do fugiat esse commodo proident laboris cillum elit.
+                Aliquip aute
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-div">
+          <div class="person-div bg-1">
+            <figure style="margin: 0">
+              <img
+                class="person-img"
+                src="assets/just-image.jpg"
+                alt="person-img"
+              />
+            </figure>
+            <figcaption>
+              <small style="font-weight: bold" class="color-subtitle"
+                >NIGERIA</small
+              >
+              <p class="person-name color-heading">Mr. Musakalamz Ogunsola</p>
+              <small class="person-role color-body"
+                >Software Engineer | Frontend Specialist</small
+              >
+            </figcaption>
+          </div>
+          <div class="person-info-div">
+            <span class="fas fa-quote-right quote"></span>
+            <div class="workdone-div bg-1">
+              <div class="work-div-flex">
+                <div>
+                  <p class="work-done color-heading">Linux Simple Shell</p>
+                  <small class="color-body via"
+                    >via Virtual - Aug 15, 2024 - Sept 19, 2024</small
+                  >
+                </div>
+                <div class="star-div">
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-filled"></small>
+                  <small class="fa fa-star star-unfilled"></small>
+                </div>
+              </div>
+              <p class="comment color-body">
+                Sint tempor proident nisi irure ipsum qui do laborum. Cillum
+                excepteur ea anim ad est in amet labore. Sint cillum voluptate
+                non ullamco nostrud aliqua. Ut pariatur voluptate reprehenderit quis esse incididunt adipisicing sint magna id aliqua aliquip.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="oval-div">
+          <div class="circle oval slide-dot-color"></div>
+          <div class="circle oval"></div>
+          <div class="circle oval"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End portfolio -->
+    <script src="index.js"></script>
+  </body>
+</html>
