@@ -565,6 +565,86 @@ section {
 }
 /* End pricing style */
 
+/* Contact style */
+#contact-us-upper-div,
+#contact-us-lower-div {
+  box-shadow: var(--shadow-1);
+  padding: 20px;
+  padding-block: 35px;
+}
+#contact-us-img {
+  border-radius: 10px;
+}
+#my-name {
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+#contact-form {
+  display: grid;
+  gap: 15px;
+}
+#contact-form div label {
+  color: var(--color-body);
+}
+#contact-form div input:focus-visible,
+#contact-form div textarea:focus-visible {
+  outline: 2px solid var(--color-subtitle);
+  transition-duration: 800ms;
+}
+
+#contact-form div input,
+#contact-form div textarea {
+  background: var(--color-dark);
+  padding: 20px;
+  color: var(--color-heading);
+  border-radius: 5px;
+  border: none;
+  border-top: 2px var(--color-tertiary) solid;
+  border-bottom: 3px var(--color-darker) solid;
+
+  resize: none;
+}
+#contact-form div {
+  display: grid;
+  gap: 10px;
+}
+#contact-form button[type="button"] {
+  box-shadow: var(--shadow-1);
+  padding: 18px;
+  background: var(--background-color-1);
+  color: var(--color-heading);
+  border: none;
+  font-weight: var(--p-medium);
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+#contact-us-upper-div .skills-and-social {
+  display: block;
+}
+#loading-div{
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5px;
+  justify-self: center;
+  margin-top: 15px;
+}
+.hide{
+  visibility: hidden;
+}
+.loading {
+  width: 8px;
+  height: 8px;
+  clip-path: circle();
+  background-color: var(--color-subtitle);
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  90% {
+    opacity: 0;
+    transform: translateY(-100%) translateX(-100%) perspective(20%);
+  }
+}
+/* End contact style */
 .header-image-div {
   display: flex;
   align-items: center;
@@ -619,7 +699,6 @@ section {
   padding: 25px;
   overflow-y: scroll;
   z-index: 2;
-  animation: fade linear 900ms;
 }
 .nav-outer-img-div {
   display: flex;
@@ -811,6 +890,12 @@ section {
     width: 80%;
   }
   /* end pricing*/
+  /* Contact us */
+  #contact-us-img {
+    width: 100%;
+    height: 350px;
+  }
+  /* End contact */
   .skills-and-social {
     flex-direction: column;
     gap: 30px;
@@ -974,6 +1059,36 @@ section {
     width: 70%;
   }
   /* end pricing*/
+  /* Contact us */
+  #contact-us-img {
+    width: 300px;
+  }
+  .contact-flex-div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  #contact-us-lower-div {
+    flex-grow: 1;
+  }
+  #contact-form div input,
+  #contact-form div textarea {
+    background: var(--color-dark);
+    padding: 15px;
+  }
+  #my-status {
+    width: 300px;
+  }
+  #input-flex div {
+    display: flex;
+    flex-direction: column;
+  }
+  #input-flex {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* End contact */
 
   .intro {
     display: flex;

@@ -148,4 +148,8 @@ window.addEventListener("load", function () {
       $(ovals[idx]).addClass("slide-dot-color");
     });
   });
+
+  $('#send-msg-btn').click(()=>{
+    $('#loading-div').removeClass('hide')
+  })
 });
