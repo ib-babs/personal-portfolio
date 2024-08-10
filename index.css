@@ -68,6 +68,9 @@ body {
   background: var(--background-color-1);
   font-family: "Montserrat";
 }
+*:active {
+  background-color: none;
+}
 a {
   text-decoration: none;
 }
@@ -86,11 +89,11 @@ hr {
   shape-rendering: crispEdges;
 }
 /* My image */
-#dev-image-container{
+#dev-image-container {
   position: relative;
 }
-#image-pad::before{
-  content: '';
+#image-pad::before {
+  content: "";
   position: absolute;
   inset: 20% 0 0 0;
   border-radius: 5px;
@@ -99,9 +102,7 @@ hr {
 }
 /* End my image */
 /* common class */
-.bg-1 {
-  background: var(--background-color-1);
-}
+
 .color-heading {
   color: var(--color-heading);
 }
@@ -117,22 +118,22 @@ hr {
 .color-subtitle {
   color: var(--color-subtitle);
 }
-.p-heading-xl{
+.p-heading-xl {
   font-size: 1.6em;
 }
-.p-medium{
+.p-medium {
   font-weight: var(--p-medium);
 }
 /* end common */
 
 /* Section style */
 .hidden {
-  opacity: 1;
-  transition-duration: 300ms;
+  opacity: 0;
+  transition-duration: 1s;
 }
 .show {
   opacity: 1;
-  transition-duration: 300ms;
+  transition-duration: 1s;
 }
 section {
   margin-inline: 40px;
@@ -154,7 +155,6 @@ section {
 }
 .what-i-do-container {
   cursor: pointer;
-  background: var(--background-color-1);
   border-radius: 10px;
   padding-inline: 40px;
   padding-block: 50px;
@@ -213,7 +213,7 @@ section {
 .portfolio-card:hover .portfolio-title {
   color: var(--color-subtitle);
 }
-.portfolio-card:hover{
+.portfolio-card:hover {
   margin-block-start: 1px;
   background: linear-gradient(87deg, #1e2024, #23272b);
   transition-duration: 100ms;
@@ -257,7 +257,7 @@ section {
   width: clamp(2000px, 90%, 200px);
   box-shadow: var(--shadow-1);
   padding: 25px;
-  background: var(--background-color-1);
+
   border-radius: 10px;
 }
 .portfolio-title {
@@ -272,14 +272,14 @@ section {
   animation: fade linear 300ms;
 }
 .resume-tabs-div {
-  background: var(--background-color-1);
   display: flex;
   justify-content: space-evenly;
   box-shadow: var(--shadow-1);
   border-radius: 10px;
   margin-bottom: 40px;
 }
-.resume-tab, .price-tab {
+.resume-tab,
+.price-tab {
   flex-grow: 1;
   text-align: center;
   padding: 30px;
@@ -303,7 +303,6 @@ section {
   border-left: 5px solid var(--color-darker);
 }
 .right-div {
-  background: var(--background-color-1);
   padding-block: 40px;
   padding-inline: 40px;
   border-radius: 5px;
@@ -350,7 +349,7 @@ section {
   color: var(--color-heading);
   transition-duration: 300ms;
 }
-.right-div:hover{
+.right-div:hover {
   background: linear-gradient(190deg, #1e2024, #23272b);
   transition-duration: 300ms;
 }
@@ -380,7 +379,8 @@ section {
   z-index: 1;
 }
 
-.resume-tab:hover, .price-tab:hover,
+.resume-tab:hover,
+.price-tab:hover,
 .tab-active {
   color: var(--color-subtitle);
   box-shadow: var(--shadow-1);
@@ -505,11 +505,11 @@ section {
 #pricing {
   display: flex;
 }
-#pricing .resume-tabs-div{
+#pricing .resume-tabs-div {
   flex-direction: row;
 }
 #pricing .resume-div {
-  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
 }
 .ptabs {
   padding-block-end: 20px;
@@ -519,46 +519,45 @@ section {
 .pricing-heading-div {
   flex-grow: 1;
 }
-.price-div{
-  background: var(--background-color-1);
+.price-div {
   box-shadow: var(--shadow-1);
   padding: 15px;
   border-radius: 5px;
 }
-.price{
+.price {
   font-weight: bolder;
   margin: 0;
 }
-.ptab-flex{
+.ptab-flex {
   margin-block: 30px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.order-now{
+.order-now {
   box-shadow: var(--shadow-1);
   text-align: center;
   padding: 25px;
   border-radius: 5px;
   margin-top: 3em;
 }
-.ptab-footer{
+.ptab-footer {
   text-align: center;
   margin-block: 1.7em;
   font-size: 0.7em;
   font-weight: bold;
 }
-.order-now:hover  {
+.order-now:hover {
   cursor: pointer;
   background: linear-gradient(179deg, #1e2024, #23272b);
   margin-top: 3.1em;
-  transition-duration:  500ms;
+  transition-duration: 500ms;
 }
-.price-services div{
+.price-services div {
   display: flex;
   gap: 10px;
 }
-.price-services{
+.price-services {
   display: grid;
   gap: 25px;
   margin-top: 40px;
@@ -616,10 +615,11 @@ section {
   color: var(--color-body);
   width: clamp(280px, 80%, 300px);
   background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
   padding: 25px;
   overflow-y: scroll;
   z-index: 2;
-  transition-duration: 300ms;
+  animation: fade linear 900ms;
 }
 .nav-outer-img-div {
   display: flex;
@@ -643,7 +643,7 @@ section {
 .social-links {
   font-size: 2em;
   display: flex;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .hire-me {
@@ -687,7 +687,7 @@ section {
 }
 .skills-set {
   display: flex;
-  gap: 10px;
+  gap: 1.3em;
 }
 .skills-set img {
   width: 30px;
@@ -700,7 +700,7 @@ section {
 .skills-and-social .social-links a {
   padding: 15px;
   box-shadow: var(--shadow-1);
-  background: var(--background-color-1);
+
   border-radius: 5px;
   color: var(--color-gray);
 }
@@ -760,7 +760,7 @@ section {
 #close-modal {
   box-shadow: var(--shadow-1);
   background: var(--color-dark);
-  padding: 18px;
+  padding: 15px;
   border-radius: 100%;
   font-weight: 700;
   transition-duration: 300ms;
@@ -780,10 +780,11 @@ section {
 
 @media screen and (320px <= width < 1024px) {
   /* Resume section style */
-  .ptab-flex{
+  .ptab-flex {
     gap: 30px;
   }
-  .ptab-flex, .resume-tabs-div {
+  .ptab-flex,
+  .resume-tabs-div {
     flex-direction: column;
   }
   .right-div {
@@ -806,7 +807,7 @@ section {
   #pricing {
     flex-direction: column;
   }
-  .price-tag-desc{
+  .price-tag-desc {
     width: 80%;
   }
   /* end pricing*/
@@ -859,7 +860,7 @@ section {
 
 @media screen and (320px <= width <= 500px) {
   /* Resume style */
-  .skill-progress{
+  .skill-progress {
     padding-inline-end: 15px;
   }
   /* End Resume */
@@ -881,14 +882,13 @@ section {
   /* End Testimonial */
 
   /* Pricing style */
-  #pricing .price-tab{
+  #pricing .price-tab {
     padding-inline: 15px;
   }
   .ptabs {
     padding-inline: 15px;
   }
   /* End Pricing  */
-
 }
 @media screen and (min-width: 1024px) {
   /* Features */
@@ -970,7 +970,7 @@ section {
     position: sticky;
     top: 100px;
   }
-  .price-tag-desc{
+  .price-tag-desc {
     width: 70%;
   }
   /* end pricing*/
@@ -1021,7 +1021,7 @@ section {
   }
   #dev-image-container img {
     width: 550px;
-   }
+  }
   header {
     margin-bottom: 5em;
   }

@@ -74,7 +74,7 @@ window.addEventListener("load", function () {
         const activeTab = $(tabDiv[idx]);
         $(tabDiv).attr("hidden", "hidden");
         activeTab.removeAttr("hidden");
-        activeTab.addClass("hidden");
+        activeTab.addClass("show");
         $(tabs).removeClass("tab-active");
         $(tab).addClass("tab-active");
         if (progress && idx === 1) {
