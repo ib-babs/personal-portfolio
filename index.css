@@ -85,7 +85,19 @@ header {
 hr {
   shape-rendering: crispEdges;
 }
-
+/* My image */
+#dev-image-container{
+  position: relative;
+}
+#image-pad::before{
+  content: '';
+  position: absolute;
+  inset: 20% 0 0 0;
+  border-radius: 5px;
+  box-shadow: var(--shadow-1);
+  z-index: -1;
+}
+/* End my image */
 /* common class */
 .bg-1 {
   background: var(--background-color-1);
@@ -1009,7 +1021,7 @@ section {
   }
   #dev-image-container img {
     width: 550px;
-  }
+   }
   header {
     margin-bottom: 5em;
   }
