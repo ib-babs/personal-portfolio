@@ -37,13 +37,21 @@ window.addEventListener("load", function () {
     $(".menu-nav-outer").toggleClass("modal-nav");
   });
 
+  $('#go-up').click(function()
+  {
+    window.scrollTo(0, 0)
+})
   this.window.addEventListener("scroll", function () {
-    if (this.scrollY > 150)
+    
+    if (this.scrollY > 150){
+      $('#go-up').css('visibility', 'visible')
       $("header").attr(
         "style",
         "background: #1e2024ee; position: sticky; top: 0; backdrop-filter: blur(4px); box-shadow: var(--shadow-1); transition: top, ease 1s"
       );
+    }
     else {
+      $('#go-up').css('visibility', 'hidden')
       $("header").attr(
         "style",
         "background:initial; position: none; box-shadow: none"
