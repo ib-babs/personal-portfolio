@@ -78,7 +78,7 @@ a {
 }
 #on-page-options{
   position: fixed;
-  z-index: 3;
+  z-index: 2;
   display: grid;
   gap: 3em;
   color: var(--color-subtitle);

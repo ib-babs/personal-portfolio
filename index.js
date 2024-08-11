@@ -129,6 +129,7 @@ window.addEventListener("load", function () {
     testimonialDivs = $(".testimonial-div");
   $(".testimonial-div").on("mousedown", function (e) {
     if (testimonialSize <= 2) {
+      document.querySelector('#mouse-clicked-audio').play()
       testimonialDivs.css("cursor", "pointer");
       if (window.innerWidth / 2 > e.clientX && testimonialSize > 0) {
         testimonialDivs.removeClass("display-testimonial-div");
@@ -159,5 +160,18 @@ window.addEventListener("load", function () {
 
   $('#send-msg-btn').click(()=>{
     $('#loading-div').removeClass('hide')
+  })
+  
+  // Play mouse-clicked audio
+  $('a, button, i, .oval, .order-now').click(()=>{
+    document.querySelector('#mouse-clicked-audio').play()
+  })
+  
+  $('#i-volume').click(function(){
+    let vol =  document.querySelector('#mouse-clicked-audio')
+    vol.volume === 1 ? 
+      vol.volume = 0 :
+      vol.volume = 1
+    $('#i-volume').toggleClass('fa-volume-off')
   })
 });
