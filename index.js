@@ -41,7 +41,7 @@ window.addEventListener("load", function () {
     if (this.scrollY > 150)
       $("header").attr(
         "style",
-        "background: #1e2024ee; position: sticky; top: 0; backdrop-filter: blur(20px); box-shadow: var(--shadow-1); transition: top, ease 1s"
+        "background: #1e2024ee; position: sticky; top: 0; backdrop-filter: blur(4px); box-shadow: var(--shadow-1); transition: top, ease 1s"
       );
     else {
       $("header").attr(

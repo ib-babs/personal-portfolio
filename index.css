@@ -68,16 +68,13 @@ body {
   background: var(--background-color-1);
   font-family: "Montserrat";
 }
-*:active {
-  background-color: none;
-}
 a {
   text-decoration: none;
 }
 
 header {
   padding-inline: 30px;
-  padding-block: 10px;
+  padding-block: 20px;
   color: var(--color-heading);
   display: flex;
   justify-content: space-between;
@@ -656,6 +653,8 @@ section {
   border-radius: 50%;
   width: 70px;
   height: 70px;
+  outline: 2px var(--color-border) solid;
+  outline-offset: 5px;
 }
 
 .menu-nav a,
@@ -911,6 +910,12 @@ section {
   .modal-nav img {
     width: 60px;
     height: 60px;
+    outline: 1px var(--color-border) solid;
+    outline-offset: 3px;
+  }
+  .header-image-div img{
+    width: 40px;
+    height: 40px;
   }
   section {
     margin-inline: 10px;
@@ -974,6 +979,16 @@ section {
     padding-inline: 15px;
   }
   /* End Pricing  */
+  /* Contact style */
+  #contact-us-img{
+    height: 200px;
+  }
+  #contact-us-upper-div,
+#contact-us-lower-div {
+  padding: 5px;
+  padding-block: 35px;
+}
+  /* End Contact */
 }
 @media screen and (min-width: 1024px) {
   /* Features */
