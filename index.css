@@ -436,8 +436,8 @@ section:last-child {
 /* End skill progress */
 /* End resume style */
 
-/* Testimonial style */
 
+/* Testimonial style */
 .person-div,
 .testimonial-div {
   display: flex;
@@ -585,7 +585,21 @@ section:last-child {
   margin-top: 40px;
   font-size: 0.9em;
 }
+#recommend-div{
+  display: inline;
+  color: var(--color-white);
+  padding: 9px;
+  background: var(--color-body);
+  margin-left: 40%;
+  border-radius: 6px;
+}
 /* End pricing style */
+
+/* Blog style */
+#blog .portfolio-projects img{
+  background-color: var(--color-border-white);
+}
+/* End Blog style */
 
 /* Contact style */
 #contact-us-upper-div,
@@ -660,6 +674,12 @@ section:last-child {
   background-color: var(--color-subtitle);
   animation: rotate 1s linear infinite;
 }
+#contact-us-upper-div .a-underlined:hover{
+color: var(--color-subtitle);
+text-decoration: underline var(--color-subtitle) 1px;
+text-underline-offset: 7px;
+transition: var(--transit);
+}
 @keyframes rotate {
   90% {
     opacity: 0;
@@ -685,16 +705,18 @@ footer {
   border-bottom: var(--border-width) solid var(--color-darker);
 }
 .footer-item-flex a {
+  transition-duration: 600ms;
   color: var(--color-heading);
   font-weight: var(--p-medium);
+  position: relative;
 }
 .footer-item-flex {
-  /* flex-grow: 1; */
   display: grid;
   gap: 15px;
 }
 footer .social-links {
   margin-top: 1.5em;
+  align-items: center;
 }
 #copyright {
   text-align: center;
@@ -703,7 +725,32 @@ footer .social-links {
   font-size: 1em;
   margin-block: 2em;
 }
+.footer-item-flex:not(:first-of-type) a:hover{
+  color: var(--color-subtitle);
+}
+
+.footer-item-flex:first-of-type a:hover{
+  margin-bottom: 5px;
+}
+
+.footer-item-flex:not(:first-of-type) a:hover:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 23px;
+  width: 0;
+  border-bottom: solid var(--color-subtitle) 1px;
+  animation: w 700ms linear;
+}
+@keyframes w {
+  90%{
+    width: 55px;
+  }
+}
+/* .footer-item-flex a:hover{
+} */
 /* End Footer */
+
 .header-image-div {
   display: flex;
   align-items: center;
@@ -957,6 +1004,20 @@ footer .social-links {
     height: 350px;
   }
   /* End contact */
+
+  /*  Blog */
+  #blog .portfolio-projects{
+    display: flex;
+    flex-direction: row;
+  }
+  #blog .portfolio-card{
+    width: 250px;
+    flex-grow: 0;
+  }
+  #blog .portfolio-projects img{
+    width: 250px;
+  }
+  /* End blog */
   .skills-and-social {
     flex-direction: column;
     gap: 30px;
@@ -1137,6 +1198,20 @@ footer .social-links {
     width: 70%;
   }
   /* end pricing*/
+
+ /*  Blog */
+ #blog .portfolio-projects{
+  display: flex;
+  flex-direction: row;
+}
+#blog .portfolio-card{
+  width: 250px;
+  flex-grow: 0;
+}
+#blog .portfolio-projects img{
+  width: clamp(250px, 100%, 350px);
+}
+
   /* Contact us */
   #contact-us-img {
     width: 300px;
