@@ -80,6 +80,9 @@ a {
 }
 
 /* Body tag style */
+#ibrahim-img{
+  transform: scaleX(-1);
+}
 #go-up{
   visibility: hidden;
 }
