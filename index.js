@@ -37,21 +37,18 @@ window.addEventListener("load", function () {
     $(".menu-nav-outer").toggleClass("modal-nav");
   });
 
-  $('#go-up').click(function()
-  {
-    window.scrollTo(0, 0)
-})
+  $("#go-up").click(function () {
+    window.scrollTo(0, 0);
+  });
   this.window.addEventListener("scroll", function () {
-    
-    if (this.scrollY > 150){
-      $('#go-up').css('visibility', 'visible')
+    if (this.scrollY > 150) {
+      $("#go-up").css("visibility", "visible");
       $("header").attr(
         "style",
-        "background: #1e2024ee; position: sticky; top: 0; backdrop-filter: blur(4px); box-shadow: var(--shadow-1); transition: top, ease 1s"
+        "position: sticky; top: 0; backdrop-filter: blur(4px); transition: top, ease 1s"
       );
-    }
-    else {
-      $('#go-up').css('visibility', 'hidden')
+    } else {
+      $("#go-up").css("visibility", "hidden");
       $("header").attr(
         "style",
         "background:initial; position: none; box-shadow: none"
@@ -97,9 +94,9 @@ window.addEventListener("load", function () {
   }
 
   // Resume tabs
-  tabHandler(rtab, rtabs)
+  tabHandler(rtab, rtabs);
   // Price tabs
-  tabHandler(ptab, ptabs, progress=false)
+  tabHandler(ptab, ptabs, (progress = false));
 
   // Development Skill Progress bard
   $.each($(".progress-bar"), function (idx, bar) {
@@ -109,7 +106,7 @@ window.addEventListener("load", function () {
         145deg,
         var(--color-primary-gradient-from) 10%,
         var(--color-primary-gradient-to) ${$(bar).data("value")}%,
-        var(--color-darker) 10%
+    var(--color-lighter) 10%
         )`
     );
 
@@ -129,7 +126,7 @@ window.addEventListener("load", function () {
     testimonialDivs = $(".testimonial-div");
   $(".testimonial-div").on("mousedown", function (e) {
     if (testimonialSize <= 2) {
-      document.querySelector('#mouse-clicked-audio').play()
+      document.querySelector("#mouse-clicked-audio").play();
       testimonialDivs.css("cursor", "pointer");
       if (window.innerWidth / 2 > e.clientX && testimonialSize > 0) {
         testimonialDivs.removeClass("display-testimonial-div");
@@ -158,20 +155,61 @@ window.addEventListener("load", function () {
     });
   });
 
-  $('#send-msg-btn').click(()=>{
-    $('#loading-div').removeClass('hide')
-  })
-  
+  $("#send-msg-btn").click(() => {
+    $("#loading-div").removeClass("hide");
+  });
+
   // Play mouse-clicked audio
-  $('a, button, i, .oval, .order-now').click(()=>{
-    document.querySelector('#mouse-clicked-audio').play()
-  })
+  $("a, button, i, .oval, .order-now").click(() => {
+    document.querySelector("#mouse-clicked-audio").play();
+  });
+
+  $("#i-volume").click(function () {
+    let vol = document.querySelector("#mouse-clicked-audio");
+    vol.volume === 1 ? (vol.volume = 0) : (vol.volume = 1);
+    $("#i-volume").toggleClass("fa-volume-off");
+  });
+
+  // Manipulate element Selector
+  function S(el) {
+    if (el.startsWith(".")) {
+      return document.querySelectorAll(el);
+    }
+    return document.querySelector(el);
+  }
+  function M(el, cssFrom, cssTo) {
+    if (el.length) {
+      const arr = new Array(...el);
+      arr.map((val) => {
+        val.style.setProperty(cssFrom, cssTo);
+      });
+    } else el.style.setProperty(cssFrom, cssTo);
+  }
+
+
+
+  $("#theme-icon").click(function () {
+    if ($("#theme-icon").hasClass("fa-moon")) {
+      $("#theme-icon").removeClass("fa-moon");
+      $("#theme-icon").addClass("fa-sun");
+      M(S("*"), "--shadow-manipulate", "var(--shadow-white-3)");
+      M(S("*"), "--bg-manipulate-1", "var(--bg-white)");
+      M(S("*"), "--color-darker-m1", "var(--bg-white)");
+      M(S("*"), "--hover-bg", "var(--gradient-red-hover)");
+      M(S(".education-div"), "--color-darker-m1", "var(--color-lighter)");
+      M(S(".portfolio-card"), "--hover-bg", "var(--bg-white)");
   
-  $('#i-volume').click(function(){
-    let vol =  document.querySelector('#mouse-clicked-audio')
-    vol.volume === 1 ? 
-      vol.volume = 0 :
-      vol.volume = 1
-    $('#i-volume').toggleClass('fa-volume-off')
-  })
+    } else {
+      $("#theme-icon").addClass("fa-moon");
+      M(S("*"), "--shadow-manipulate", "var(--shadow-1)");
+      M(S("*"), "--bg-manipulate-1", "var(--background-color-1)");
+      M(S("*"), "--color-darker-m1", "var(--color-darker)");
+      M(S("*"), "--hover-bg", "var(--background-color-1)");
+      M(S(".education-div"), "--color-darker-m1", "var(--color-darker)");
+      M(S(".portfolio-card"), "--hover-bg", "var(--background-color-1)");
+    }
+    $("body").toggleClass("light-mode");
+    $('section').toggleClass('light-border-line')
+    $(".light-mode-shadow, header, #theme-icon").toggleClass("toggle-shadow");
+  });
 });
