@@ -196,6 +196,7 @@ window.addEventListener("load", function () {
       M(S("*"), "--bg-manipulate-1", "var(--bg-white)");
       M(S("*"), "--color-darker-m1", "var(--bg-white)");
       M(S("*"), "--hover-bg", "var(--gradient-red-hover)");
+      M(S("*"), "--bg-gradient-1", "var(--gradient-box-w)");
       M(S(".education-div"), "--color-darker-m1", "var(--color-lighter)");
       M(S(".portfolio-card"), "--hover-bg", "var(--bg-white)");
   
@@ -203,13 +204,16 @@ window.addEventListener("load", function () {
       $("#theme-icon").addClass("fa-moon");
       M(S("*"), "--shadow-manipulate", "var(--shadow-1)");
       M(S("*"), "--bg-manipulate-1", "var(--background-color-1)");
+      M(S("*"), "--bg-gradient-1", "var(--background-color-1)");
       M(S("*"), "--color-darker-m1", "var(--color-darker)");
       M(S("*"), "--hover-bg", "var(--background-color-1)");
       M(S(".education-div"), "--color-darker-m1", "var(--color-darker)");
       M(S(".portfolio-card"), "--hover-bg", "var(--background-color-1)");
     }
     $("body").toggleClass("light-mode");
-    $('section').toggleClass('light-border-line')
+    $('input, textarea').toggleClass('light-input')
+    $('section, .school, .work-div-flex, .footer-flex').toggleClass('light-border-line')
+    $('.point').toggleClass('point-shadow')
     $(".light-mode-shadow, header, #theme-icon").toggleClass("toggle-shadow");
   });
 });
