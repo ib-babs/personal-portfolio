@@ -1355,6 +1355,8 @@ footer .social-links {
 .light-mode #a-letter {
   color: var(--color-subtitle);
 }
+.light-mode header,
+.light-mode .modal-nav a,
 .light-mode #hi-me,
 .light-mode .typesetting-div li,
 .light-mode #welcome,
