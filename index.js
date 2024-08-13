@@ -196,6 +196,7 @@ window.addEventListener("load", function () {
       M(S("*"), "--bg-manipulate-1", "var(--bg-white)");
       M(S("*"), "--color-darker-m1", "var(--bg-white)");
       M(S("*"), "--hover-bg", "var(--gradient-red-hover)");
+      M(S("*"), "--color-heading-m1", "var(--color-body-white)");
       M(S("*"), "--bg-gradient-1", "var(--gradient-box-w)");
       M(S(".education-div"), "--color-darker-m1", "var(--color-lighter)");
       M(S(".portfolio-card"), "--hover-bg", "var(--bg-white)");
@@ -206,6 +207,7 @@ window.addEventListener("load", function () {
       M(S("*"), "--bg-manipulate-1", "var(--background-color-1)");
       M(S("*"), "--bg-gradient-1", "var(--background-color-1)");
       M(S("*"), "--color-darker-m1", "var(--color-darker)");
+      M(S("*"), "--color-heading-m1", "var(--color-heading)");
       M(S("*"), "--hover-bg", "var(--background-color-1)");
       M(S(".education-div"), "--color-darker-m1", "var(--color-darker)");
       M(S(".portfolio-card"), "--hover-bg", "var(--background-color-1)");
