@@ -41,7 +41,7 @@ window.addEventListener("load", function () {
     window.scrollTo(0, 0);
   });
   this.window.addEventListener("scroll", function () {
-    if (this.scrollY > 150) {
+    if (this.scrollY > 130) {
       $("#go-up").css("visibility", "visible");
       $("header").attr(
         "style",
